@@ -1,0 +1,21 @@
+# Dependencias — se reinstalan con npm install, no se versionan (pesan cientos de MB)
+node_modules/
+
+# Variables de entorno — contienen contraseñas/secretos, NUNCA se suben a Git
+.env
+.env.local
+
+# Builds compilados — se regeneran, no son código fuente
+dist/
+build/
+
+# Logs
+*.log
+
+# Editor / sistema operativo
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Reportes de cobertura de tests
+coverage/
