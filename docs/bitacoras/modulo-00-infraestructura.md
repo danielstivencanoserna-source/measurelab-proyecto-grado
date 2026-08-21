@@ -47,3 +47,14 @@ Ver **Incidente #3**. Commit de este paso **pendiente de cerrar** (ver sección 
 | 3 | `cd ..` sacó de la raíz del repositorio hacia la carpeta de usuario de Windows, rompiendo comandos `git` posteriores | Cada terminal nueva inicia en su propio directorio; no se verificó con `pwd` antes de operar | Baja | Verificación explícita con `pwd` antes de cada operación sensible | N/A |
 
 ## 5. Evidencia — historial de commits
+
+## 6. Pendientes inmediatos
+- [ ] Confirmar `git status` limpio (sin `node_modules/`) y cerrar commit `feat: inicializa backend con Express y servidor base`
+- [ ] Push del backend a `origin/main`
+- [ ] Paso 7: variables de entorno (`.env`) y conexión a PostgreSQL
+
+## 7. Lecciones aprendidas
+
+- La verificación explícita (`pwd`, `git status`, `git diff`) antes de asumir el estado del sistema evitó que el Incidente #2 se propagara al historial remoto sin detectarse.
+- Las advertencias de Git sobre CRLF/LF no son errores bloqueantes — distinguir severidad real evita decisiones apresuradas.
+- Un commit ya subido (`push`) a un remoto se corrige hacia adelante con un commit nuevo, no reescribiendo historia con `--amend --force`, salvo justificación clara.
