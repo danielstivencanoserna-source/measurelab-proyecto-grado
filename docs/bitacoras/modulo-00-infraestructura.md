@@ -1,6 +1,6 @@
 # Bitácora / Informe de Entrega — Módulo 0: Infraestructura y Configuración Base
 
-**Estado:** 🔄 En curso (avance parcial — entrega intermedia)
+**Estado:** ✅ Cerrado
 **Rama de trabajo:** main
 **Repositorio:** github.com/danielstivencanoserna-source/measurelab-proyecto-grado
 
@@ -47,11 +47,20 @@ Ver **Incidente #3**. Commit de este paso **pendiente de cerrar** (ver sección 
 | 3 | `cd ..` sacó de la raíz del repositorio hacia la carpeta de usuario de Windows, rompiendo comandos `git` posteriores | Cada terminal nueva inicia en su propio directorio; no se verificó con `pwd` antes de operar | Baja | Verificación explícita con `pwd` antes de cada operación sensible | N/A |
 
 ## 5. Evidencia — historial de commits
+\`\`\`
+674002a docs: agrega README inicial y configuracion de gitignore
+7297196 docs: agrega estructura de documentacion y roadmap de modulos
+6edd527 fix: agrega contenido real a .gitignore y README (paso 4 quedo vacio)
+dbe9811 feat: inicializa backend con Express y servidor base
+5e62258 docs: agrega bitacora de avance parcial del modulo 0
+\`\`\`
 
 ## 6. Pendientes inmediatos
-- [ ] Confirmar `git status` limpio (sin `node_modules/`) y cerrar commit `feat: inicializa backend con Express y servidor base`
-- [ ] Push del backend a `origin/main`
-- [ ] Paso 7: variables de entorno (`.env`) y conexión a PostgreSQL
+## 6. Pendientes inmediatos
+
+- [x] Commit del backend (`dbe9811`) confirmado y sincronizado con `origin/main`
+- [x] `git status` verificado limpio
+- [ ] Variables de entorno (`.env`) y conexión a PostgreSQL → pasa a **Módulo 1**
 
 ## 7. Lecciones aprendidas
 
