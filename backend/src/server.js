@@ -1,17 +1,21 @@
 // server.js — punto de entrada del backend
-// Aqui arranca todo: se crea la app de Express y se pone a escuchar peticiones.
+require('dotenv').config({ quiet: true });
+const express = require('express');
+const cookieParser = require('cookie-parser');
+const authRoutes = require('./routes/auth.routes');
 
-const express = require('express');   // trae el framework instalado en el paso 6.3
-const app = express();                 // crea la aplicacion — un objeto que sabe manejar peticiones HTTP
+const app = express();
+app.use(express.json());
+app.use(cookieParser());
 
-const PORT = 3001;                     // puerto donde el servidor va a escuchar
+const PORT = process.env.PORT || 3001;
 
-// Ruta de prueba: cuando alguien visite "/", responde con JSON
 app.get('/', (req, res) => {
   res.json({ mensaje: 'Measurelab API funcionando' });
 });
 
-// Pone el servidor a escuchar. El callback se ejecuta UNA VEZ, cuando ya esta listo.
+app.use('/api/auth', authRoutes);
+
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });

@@ -50,7 +50,7 @@ Suite de 8 pruebas end-to-end vía HTTP real contra PostgreSQL: registro, regist
 
 ## 6. Pendientes inmediatos
 
-- [ ] Módulo 3: modelo, middleware de subida de archivos (Multer), controlador y rutas de reactivos
+- [ ] Módulo 3: modelo, middleware de subida de claearchivos (Multer), controlador y rutas de reactivos
 
 ## 7. Lecciones aprendidas
 
