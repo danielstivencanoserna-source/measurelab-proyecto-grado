@@ -18,7 +18,7 @@ Dejar el middleware de autenticación y autorización funcional y verificado de 
 `wc -l src/middlewares/auth.middleware.js` devolvió 0 líneas: el archivo estaba vacío pese al commit `6e50aaf` del Módulo 2.
 
 ### Paso 2 — Reconstrucción del middleware
-Se escribió el archivo con sus dos funciones (`autenticar` y `autorizar`), verificando la pestaña activa del editor antes de pegar. `wc -l` confirmó 56 líneas guardadas.
+Se escribió el archivo con sus dos funciones (`autenticar` y `autorizar`), verificando la pestaña activa del editor antes de pegar. `wc -l` confirmó 56 líneas guardadas. 
 
 ### Paso 3 — Configuración de los secretos JWT
 `grep -c "JWT_ACCESS_SECRET" .env` devolvió 0: el `.env` real no tenía las variables de autenticación. Se generaron dos secretos aleatorios de 64 bytes con el módulo `crypto` de Node y se agregaron al `.env` junto con los tiempos de expiración, sin mostrarlos en pantalla. Se verificó con `grep -c "JWT" .env` (4 variables) y con `git check-ignore .env` que Git ignora el archivo.
